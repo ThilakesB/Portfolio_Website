@@ -718,11 +718,56 @@ a {
         display: none;
     }
     
+    /* Mobile Menu Active State */
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: var(--nav-height);
+        left: 0;
+        width: 100%;
+        background-color: rgba(9, 9, 22, 0.98);
+        backdrop-filter: blur(10px);
+        padding: 24px;
+        gap: 20px;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .mobile-nav-btn-container {
+        display: block !important;
+        margin-top: 10px;
+    }
+
+    .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        background-color: rgba(255,255,255,0.05);
+        padding: 16px;
+        margin-top: 12px;
+        display: none;
+    }
+
+    /* Keep dropdown open or hover state easy on mobile */
+    .dropdown:hover .dropdown-menu {
+        display: block;
+        transform: none;
+    }
+
+    .dropdown-columns {
+        flex-direction: column;
+        gap: 20px;
+    }
+
     .mobile-menu-btn {
         display: block;
         background: transparent;
         border: none;
         cursor: pointer;
+        z-index: 101;
     }
     
     .mobile-menu-btn span {
@@ -731,6 +776,109 @@ a {
         height: 2px;
         background: white;
         margin: 5px 0;
-        transition: 0.3s;
+        transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .mobile-menu-btn.active span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .mobile-menu-btn.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile-menu-btn.active span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* Typography Adjustments */
+    h1 {
+        font-size: clamp(2.5rem, 8vw, 3.5rem);
+    }
+    
+    h2 {
+        font-size: clamp(2rem, 6vw, 2.5rem);
+    }
+
+    /* Spacing Adjustments */
+    .hero {
+        padding-top: 100px;
+        padding-bottom: 60px;
+    }
+
+    .hero-container {
+        gap: 30px;
+    }
+
+    .feature {
+        padding: 60px 0;
+    }
+
+    .feature-container {
+        gap: 40px;
+    }
+
+    /* Buttons Adjustments */
+    .btn-large {
+        padding: 14px 24px;
+        font-size: 1.1rem;
+        width: 100%;
+    }
+
+    .hero-buttons {
+        gap: 16px;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-avatar {
+        max-width: 85%;
+    }
+
+    /* List Items alignment */
+    .styled-list li {
+        text-align: left;
+    }
+
+    /* Chat UI adjustments */
+    .chat-message {
+        gap: 12px;
+    }
+    
+    .avatar {
+        min-width: 32px;
+        width: 32px;
+        height: 32px;
+    }
+    
+    .msg-text {
+        font-size: 0.95rem;
+    }
+
+    /* Footer adjustments */
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .footer-links {
+        gap: 40px;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-buttons {
+        flex-direction: column;
+    }
+    
+    .stream-thumbnails {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+    }
+    
+    .glass-card {
+        padding: 16px;
     }
 }

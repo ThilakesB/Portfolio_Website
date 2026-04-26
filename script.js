@@ -76,26 +76,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelector('.nav-links');
     
     mobileMenuBtn.addEventListener('click', () => {
-        // Simple toggle logic (would be expanded in a full implementation)
-        const isExpanded = mobileMenuBtn.classList.toggle('active');
-        if(isExpanded) {
-            navLinks.style.display = 'flex';
-            navLinks.style.flexDirection = 'column';
-            navLinks.style.position = 'absolute';
-            navLinks.style.top = '80px';
-            navLinks.style.left = '0';
-            navLinks.style.width = '100%';
-            navLinks.style.backgroundColor = '#1e1f2b';
-            navLinks.style.padding = '20px';
-        } else {
-            navLinks.style.display = 'none';
-        }
+        mobileMenuBtn.classList.toggle('active');
+        navLinks.classList.toggle('active');
     });
 
-    // Reset inline styles on resize
+    // Reset styles on resize
     window.addEventListener('resize', () => {
         if(window.innerWidth > 768) {
-            navLinks.style = '';
+            navLinks.classList.remove('active');
             mobileMenuBtn.classList.remove('active');
         }
     });
