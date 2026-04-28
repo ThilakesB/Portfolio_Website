@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Main Portfolio Page -->
+  <url>
+    <loc>https://thilakesb.github.io/Portfolio/</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Hero / About Section -->
+  <url>
+    <loc>https://thilakesb.github.io/Portfolio/#hero-section</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Projects Section -->
+  <url>
+    <loc>https://thilakesb.github.io/Portfolio/#feature-1</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Work Experience Section -->
+  <url>
+    <loc>https://thilakesb.github.io/Portfolio/#feature-2</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>

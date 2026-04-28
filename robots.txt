@@ -1,0 +1,8 @@
+# robots.txt for Thilakeswaran B - Portfolio
+# https://thilakesb.github.io/Portfolio/
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://thilakesb.github.io/Portfolio/sitemap.xml
