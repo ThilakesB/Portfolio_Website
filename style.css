@@ -282,10 +282,12 @@ a {
 }
 
 .hero-avatar {
-    width: 100%;
-    max-width: 450px;
-    height: auto;
-    filter: drop-shadow(0 30px 40px rgba(0, 0, 0, 0.4));
+    width: min(420px, 100%);
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 8px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
 }
 
 /* UI Mockups */
@@ -832,7 +834,7 @@ a {
     }
 
     .hero-avatar {
-        max-width: 85%;
+        width: min(320px, 78vw);
     }
 
     /* List Items alignment */
@@ -869,6 +871,15 @@ a {
 }
 
 @media (max-width: 480px) {
+    .hero-image {
+        margin-top: 8px;
+    }
+
+    .hero-avatar {
+        width: min(260px, 72vw);
+        border-width: 6px;
+    }
+
     .hero-buttons {
         flex-direction: column;
     }
