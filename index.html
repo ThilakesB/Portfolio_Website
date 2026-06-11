@@ -10,71 +10,75 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+
+    <!-- CDNs for WebGL constellation background and GSAP animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
+    <!-- Three.js Ambient Particle Background -->
+    <canvas id="hero-canvas"></canvas>
+
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">
+            <a href="#" class="logo">Thilakeswaran B</a>
 
-
-
-                <ul class="nav-links">
-                    <li><a href="#" class="nav-link">About</a></li>
-                    <li><a href="#" class="nav-link">Experience</a></li>
-                    <li><a href="#" class="nav-link">Projects</a></li>
-                    <li class="dropdown" id="dropdown-safety">
-                        <a href="#" class="nav-link has-dropdown">Skills <svg width="12" height="12" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg></a>
-                        <div class="dropdown-menu">
-                            <div class="dropdown-columns">
-                                <div class="dropdown-col">
-                                    <span class="dropdown-title">Languages</span>
-                                    <a href="#">Python</a>
-                                    <a href="#">Java</a>
-                                    <a href="#">C++</a>
-                                    <a href="#">HTML/CSS/JS</a>
-                                    <a href="#"></a>
-                                    <a href="#">HTML/CSS/JS</a>
-
-
-                                </div>
-                                <div class="dropdown-col">
-                                    <span class="dropdown-title">Tools & Frameworks</span>
-                                    <a href="#">React & Flask</a>
-                                    <a href="#">Power BI</a>
-                                    <a href="#">Git & GitHub</a>
-                                    <a href="#">n8n & MCP</a>
-                                    <a href="#">Linux Basics</a>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="dropdown" id="dropdown-quests">
-                        <a href="#" class="nav-link has-dropdown">Education <svg width="12" height="12"
-                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg></a>
-                        <div class="dropdown-menu single-col">
+            <ul class="nav-links">
+                <li><a href="#hero-section" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#certifications" class="nav-link">Certificates</a></li>
+                <li class="dropdown" id="dropdown-skills">
+                    <a href="#" class="nav-link has-dropdown">Skills <svg width="12" height="12" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg></a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-columns">
                             <div class="dropdown-col">
-                                <span class="dropdown-title">Highlights</span>
-                                <a href="#">6 TO 12th Government Higher Secondary School Mangalapuram</a>
-                                <a href="#">BE.CSE@Gnanamani College Of Technology</a>
+                                <span class="dropdown-title">Languages</span>
+                                <a href="#">Python</a>
+                                <a href="#">Java</a>
+                                <a href="#">C++</a>
+                                <a href="#">HTML/CSS/JS</a>
+                            </div>
+                            <div class="dropdown-col">
+                                <span class="dropdown-title">Tools & Frameworks</span>
+                                <a href="#">React & Flask</a>
+                                <a href="#">Power BI</a>
+                                <a href="#">Git & GitHub</a>
+                                <a href="#">n8n & MCP</a>
+                                <a href="#">Linux Basics</a>
                             </div>
                         </div>
-                    </li>
-                </ul>
+                    </div>
+                </li>
+                <li class="dropdown" id="dropdown-quests">
+                    <a href="#" class="nav-link has-dropdown">Education <svg width="12" height="12" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg></a>
+                    <div class="dropdown-menu single-col">
+                        <div class="dropdown-col">
+                            <span class="dropdown-title">Highlights</span>
+                            <a href="#">6 TO 12th Government Higher Secondary School Mangalapuram</a>
+                            <a href="#">BE.CSE@Gnanamani College Of Technology</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
 
-                <a href="thilakesb@gmail.com" class="btn btn-white" id="nav-btn">Contact Me</a>
-                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+            <a href="mailto:thilakesb@gmail.com" class="btn btn-white" id="nav-btn">Contact Me</a>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
@@ -95,16 +99,20 @@
                         skills in Java and modern technologies while exploring new ideas to grow in the tech field. I
                         like creating meaningful projects that solve real problems and help me learn continuously.</p>
                     <div class="hero-buttons">
-                        <a href="assets/Thilakeswaran%27s%20Resume.pdf" class="btn btn-white btn-large hover-lift" download>
+                        <a href="assets/Thilakeswaran%27s%20Resume.pdf" class="btn btn-white btn-large hover-lift"
+                            download>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2">
                                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
                             </svg>
                             Download Resume
                         </a>
-                        <a href="https://www.linkedin.com/in/thilakeswaran-b-50b431280/" class="btn btn-blurple btn-large hover-lift" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
+                        <a href="https://www.linkedin.com/in/thilakeswaran-b-50b431280/"
+                            class="btn btn-blurple btn-large hover-lift" target="_blank"
+                            rel="noopener noreferrer">Connect on LinkedIn</a>
                         <a href="https://github.com/ThilakesB" class="btn btn-blurple btn-large hover-lift"
-                            style="background: transparent; border: 1px solid rgba(255,255,255,0.2);" target="_blank" rel="noopener noreferrer">
+                            style="background: transparent; border: 1px solid rgba(255,255,255,0.2);" target="_blank"
+                            rel="noopener noreferrer">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2">
                                 <path
@@ -112,6 +120,15 @@
                                 </path>
                             </svg>
                             GitHub
+                        </a>
+                        <a href="https://www.credly.com/users/thilakeswaran-b" class="btn btn-large hover-lift"
+                            style="background: #ec5d00; color: #ffffff;" target="_blank" rel="noopener noreferrer">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="8" r="7"></circle>
+                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                            </svg>
+                            Credly Profile
                         </a>
                     </div>
                 </div>
@@ -121,69 +138,236 @@
             </div>
         </section>
 
-        <section class="feature alt-bg" id="feature-1">
-            <div class="feature-container">
+        <!-- Structured Projects Grid -->
+        <section class="feature alt-bg" id="projects">
+            <div class="feature-container-full">
                 <div class="feature-content reveal-text">
-                    <h2>PROJECT<br>HIGHLIGHTS<br>& RESEARCH</h2>
-                    <p>Load Balancer System
-                        Built a system to distribute traffic across multiple servers using Round Robin algorithm.
-                        Handles multiple user requests efficiently.
-                        AI Examination Monitoring System
-                        Developed a secure exam system that locks browser tabs and disables copy-paste to prevent
-                        cheating.
-                        Skin Disease Analyzer (AI + LLM)
-                        Created an AI-based tool to analyze skin conditions and predict possible diseases.
-                        AI Resume Analyzer
-                        Built a system that analyzes resumes and gives suggestions to improve job chances.
-                        n8n Workflow Automation
-                        Developed automated workflows using n8n to connect APIs and reduce manual work.
-                        Billing Software
-                        Designed a billing system to generate invoices and manage customer transactions.
-                        Password Encryption & Decryption Tool
-                        Created a tool to securely encrypt and decrypt sensitive data using basic security methods.</p>
+                    <h2 class="center-text">PROJECT HIGHLIGHTS & RESEARCH</h2>
+                    <div class="projects-grid">
+                        <div class="project-card">
+                            <div class="project-header">
+                                <span class="project-icon"></span>
+                                <h3>Load Balancer System</h3>
+                            </div>
+                            <p>Built a system to distribute traffic across multiple servers using Round Robin algorithm.
+                                Handles multiple user requests efficiently.</p>
+                            <div class="project-badges">
+                                <span>Network</span>
+                                <span>Systems</span>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-header">
+                                <span class="project-icon"></span>
+                                <h3>AI Examination Monitoring System</h3>
+                            </div>
+                            <p>Developed a secure exam system that locks browser tabs and disables copy-paste to prevent
+                                cheating.</p>
+                            <div class="project-badges">
+                                <span>AI Security</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-header">
+                                <span class="project-icon"></span>
+                                <h3>Skin Disease Analyzer (AI + LLM)</h3>
+                            </div>
+                            <p>Created an AI-based tool to analyze skin conditions and predict possible diseases.</p>
+                            <div class="project-badges">
+                                <span>AI + LLM</span>
+                                <span>Computer Vision</span>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-header">
+                                <span class="project-icon"></span>
+                                <h3>AI Resume Analyzer</h3>
+                            </div>
+                            <p>Built a system that analyzes resumes and gives suggestions to improve job chances.</p>
+                            <div class="project-badges">
+                                <span>NLP</span>
+                                <span>AI Parser</span>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-header">
+                                <span class="project-icon"></span>
+                                <h3>n8n Workflow Automation</h3>
+                            </div>
+                            <p>Developed automated workflows using n8n to connect APIs and reduce manual work.</p>
+                            <div class="project-badges">
+                                <span>n8n</span>
+                                <span>Automation</span>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-header">
+                                <span class="project-icon"></span>
+                                <h3>Billing Software</h3>
+                            </div>
+                            <p>Designed a billing system to generate invoices and manage customer transactions.</p>
+                            <div class="project-badges">
+                                <span>Software</span>
+                                <span>Database</span>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-header">
+                                <span class="project-icon"></span>
+                                <h3>Password Encryption & Decryption Tool</h3>
+                            </div>
+                            <p>Created a tool to securely encrypt and decrypt sensitive data using basic security
+                                methods.</p>
+                            <div class="project-badges">
+                                <span>Cryptography</span>
+                                <span>Security</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="feature" id="feature-2">
-            <div class="feature-container reverse">
+        <!-- Structured Work Experience Timeline -->
+        <section class="feature" id="experience">
+            <div class="feature-container-full">
                 <div class="feature-content reveal-text">
-                    <h2>WORK<br>EXPERIENCE<br>& INTERNSHIPS</h2>
-                    <p>Team Lead at HGRD Edu Tech mentoring students. Cybersecurity Intern at Rinex Technology
-                        conducting vulnerability analysis. Data Visualization Intern at Tata Group building interactive
-                        Power BI dashboards.</p>
+                    <h2 class="center-text">WORK EXPERIENCE & INTERNSHIPS</h2>
+                    <div class="experience-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-tag">Management</span>
+                                <h3>Team Lead at HGRD Edu Tech</h3>
+                                <p>Team Lead at HGRD Edu Tech mentoring students.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-tag">Cybersecurity</span>
+                                <h3>Cybersecurity Intern at Rinex Technology</h3>
+                                <p>Cybersecurity Intern at Rinex Technology conducting vulnerability analysis.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-tag">Data Visualization</span>
+                                <h3>Data Visualization Intern at Tata Group</h3>
+                                <p>Data Visualization Intern at Tata Group building interactive Power BI dashboards.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-tag">Python Development</span>
+                                <h3>Python Intern at Cybernuts</h3>
+                                <p>Python Intern at Cybernuts.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Structured Certifications & Achievements Timeline -->
+        <section class="feature alt-bg" id="certifications">
+            <div class="feature-container-full">
+                <div class="feature-content reveal-text">
+                    <h2 class="center-text">CERTIFICATIONS & ACHIEVEMENTS</h2>
+                    <div class="certifications-timeline">
+
+                        <!-- Item 1: BCG X Data Science -->
+                        <div class="cert-timeline-item">
+                            <div class="cert-timeline-marker"></div>
+                            <div class="cert-timeline-content">
+                                <span class="cert-timeline-tag">Data Science</span>
+                                <span class="cert-timeline-date">May 2, 2026</span>
+                                <h3>Data Science Job Simulation</h3>
+                                <p class="cert-timeline-issuer">Issued by: BCG X (Forage)</p>
+                            </div>
+                        </div>
+
+                        <!-- Item 2: Red Hat AI Foundations -->
+                        <div class="cert-timeline-item">
+                            <div class="cert-timeline-marker"></div>
+                            <div class="cert-timeline-content">
+                                <span class="cert-timeline-tag">Artificial Intelligence</span>
+                                <span class="cert-timeline-date">March 23, 2026</span>
+                                <h3>Red Hat AI Foundations Executive Certificate</h3>
+                                <p class="cert-timeline-issuer">Issued by: Red Hat</p>
+                                <a href="https://www.credly.com/badges/65d6e803-6ecd-460b-9596-e94572bb9408"
+                                    target="_blank" rel="noopener noreferrer" class="btn-verify-timeline">Verify
+                                    Credential</a>
+                            </div>
+                        </div>
+
+                        <!-- Item 3: Intro to Linux -->
+                        <div class="cert-timeline-item">
+                            <div class="cert-timeline-marker"></div>
+                            <div class="cert-timeline-content">
+                                <span class="cert-timeline-tag">Linux</span>
+                                <span class="cert-timeline-date">August 16, 2025</span>
+                                <h3>Introduction to Linux LFS101</h3>
+                                <p class="cert-timeline-issuer">Issued by: The Linux Foundation</p>
+                                <p class="cert-timeline-id">Credential ID: LF8svy3cjqye</p>
+                            </div>
+                        </div>
+
+                        <!-- Item 4: Python Essentials 1 -->
+                        <div class="cert-timeline-item">
+                            <div class="cert-timeline-marker"></div>
+                            <div class="cert-timeline-content">
+                                <span class="cert-timeline-tag">Python Essentials</span>
+                                <span class="cert-timeline-date">August 2, 2025</span>
+                                <h3>Python Essentials 1</h3>
+                                <p class="cert-timeline-issuer">Issued by: Cisco Networking Academy & OpenEDG</p>
+                            </div>
+                        </div>
+
+                        <!-- Item 5: MongoDB Basics -->
+                        <div class="cert-timeline-item">
+                            <div class="cert-timeline-marker"></div>
+                            <div class="cert-timeline-content">
+                                <span class="cert-timeline-tag">Database</span>
+                                <span class="cert-timeline-date">June 18, 2025</span>
+                                <h3>MongoDB Basics for Students</h3>
+                                <p class="cert-timeline-issuer">Issued by: MongoDB</p>
+                                <a href="https://www.credly.com/go/OjIf0S1y/" target="_blank" rel="noopener noreferrer"
+                                    class="btn-verify-timeline">Verify Credential</a>
+                            </div>
+                        </div>
+
+                        <!-- Item 6: Line Follower Robot -->
+                        <div class="cert-timeline-item">
+                            <div class="cert-timeline-marker"></div>
+                            <div class="cert-timeline-content">
+                                <span class="cert-timeline-tag">Robotics</span>
+                                <span class="cert-timeline-date">February 20-22, 2025</span>
+                                <h3>Design and Development of Line Follower Robot</h3>
+                                <p class="cert-timeline-issuer">Issued by: VIPA Robotics, Erode</p>
+                            </div>
+                        </div>
+
+                        <!-- Item 7: Open Source Hackathon -->
+                        <div class="cert-timeline-item">
+                            <div class="cert-timeline-marker"></div>
+                            <div class="cert-timeline-content">
+                                <span class="cert-timeline-tag">Hackathon</span>
+                                <h3>Open Source Hackathon Certificate</h3>
+                                <p class="cert-timeline-issuer">Issued by: Elite Coders</p>
+                                <a href="https://oshack.xyz/" target="_blank" rel="noopener noreferrer"
+                                    class="btn-verify-timeline">Verify Credential</a>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </section>
     </main>
-
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-brand">
-                <h2>Thilakeswaran B</h2>
-            </div>
-            <div class="footer-links">
-                <div class="footer-col">
-                    <h3>Links</h3>
-                    <a href="#">GitHub</a>
-                    <a href="#">LinkedIn</a>
-                    <a href="mailto:thilakesb@gmail.com">Email</a>
-                </div>
-                <div class="footer-col">
-                    <h3>Experience</h3>
-                    <a href="#">HGRD Edu Tech</a>
-                    <a href="#">Rinex Technology</a>
-                    <a href="#">Tata Group</a>
-                </div>
-                <div class="footer-col">
-                    <h3>Projects</h3>
-                    <a href="#">Skin Disease AI</a>
-                    <a href="#">Tactical RL</a>
-                    <a href="#">AI Job Agent</a>
-                </div>
-            </div>
-        </div>
-    </footer>
 
     <script src="script.js"></script>
 </body>
