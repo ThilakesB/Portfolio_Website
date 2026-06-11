@@ -1,4 +1,4 @@
-# 🧠 thilakesb.vercel.app — Personal Portfolio
+# thilakesb.vercel.app — Personal Portfolio
 
 > Portfolio website of **Thilakeswaran B** — CSE student, AI/ML enthusiast, and builder.
 
@@ -8,13 +8,13 @@
 
 ---
 
-## 📌 About
+##  About
 
 This is my personal portfolio site — built to showcase my projects, internships, skills, and background as a Computer Science Engineering student specializing in AI/ML and Web Development.
 
 ---
 
-## 🗂️ Sections
+##  Sections
 
 | Section | Description |
 |---|---|
@@ -27,7 +27,7 @@ This is my personal portfolio site — built to showcase my projects, internship
 
 ---
 
-## 🚀 Featured Projects
+##  Featured Projects
 
 - **Skin Disease Analyzer** — AI + LLM based skin condition prediction (MobileNetV2 / HAM10000)
 - **Load Balancer System** — Round Robin traffic distribution across servers
@@ -39,7 +39,7 @@ This is my personal portfolio site — built to showcase my projects, internship
 
 ---
 
-## 💼 Experience
+## Experience
 
 - **Team Lead** — HGRD Edu Tech *(mentoring students)*
 - **Cybersecurity Intern** — Rinex Technology *(vulnerability analysis)*
@@ -47,7 +47,7 @@ This is my personal portfolio site — built to showcase my projects, internship
 
 ---
 
-## 🛠️ Tech Stack (Skills)
+##  Tech Stack (Skills)
 
 **Languages:** Python · Java · C++ · HTML/CSS/JS
 
@@ -55,7 +55,7 @@ This is my personal portfolio site — built to showcase my projects, internship
 
 ---
 
-## 📫 Contact
+##  Contact
 
 - 📧 [thilakesb@gmail.com](mailto:thilakesb@gmail.com)
 - 💼 [LinkedIn](https://www.linkedin.com/in/thilakeswaran-b-50b431280/)
