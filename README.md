@@ -1,4 +1,6 @@
-# <h2>Portfolio</h2>
+<div align="center">
+
+<h2>Portfolio</h2>
 <p><a href="https://thilakesb.vercel.app/" target="_blank">https://thilakesb.vercel.app/</a></p>
 
 > Portfolio website of **Thilakeswaran B** — CSE student, AI/ML enthusiast, and builder.
@@ -51,7 +53,6 @@ This is my personal portfolio site — built to showcase my projects, internship
 ##  Tech Stack (Skills)
 
 **Languages:** Python · Java · C++ · HTML/CSS/JS
-
 **Frameworks & Tools:** React · Flask · Power BI · Git & GitHub · n8n · MCP · Linux
 
 ---
@@ -65,3 +66,5 @@ This is my personal portfolio site — built to showcase my projects, internship
 ---
 
 <p align="center">Built & maintained by <strong>Thilakeswaran B</strong></p>
+
+</div>
