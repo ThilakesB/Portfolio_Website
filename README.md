@@ -1,4 +1,5 @@
-# thilakesb.vercel.app — Personal Portfolio
+# <h2>Portfolio</h2>
+<p><a href="https://thilakesb.vercel.app/" target="_blank">https://thilakesb.vercel.app/</a></p>
 
 > Portfolio website of **Thilakeswaran B** — CSE student, AI/ML enthusiast, and builder.
 
