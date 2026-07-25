@@ -94,6 +94,18 @@ a {
     background-color: #4752c4;
     box-shadow: 0 8px 15px rgba(88, 101, 242, 0.4);
 }
+.tryhackme-btn {
+  background: #161E2A;
+  color: #FFFFFF;
+  border: 1px solid #2A3442;
+}
+
+.tryhackme-btn:hover {
+  background: #1B2430;
+  border-color: #3A4658;
+}
+
+
 
 .hover-lift {
     transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
