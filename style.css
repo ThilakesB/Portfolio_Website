@@ -139,17 +139,24 @@ a {
 .navbar {
     position: fixed;
     top: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 100%;
     height: var(--nav-height);
     z-index: 100;
-    transition: background-color var(--transition-fast);
+    transition: top 0.3s ease, width 0.3s ease, border-radius 0.3s ease, background-color 0.3s ease, border 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease;
+    border-radius: 0;
 }
 
 .navbar.scrolled {
-    background-color: rgba(9, 9, 22, 0.95);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255,255,255,0.05);
+    top: 12px;
+    width: min(1200px, calc(100% - 32px));
+    border-radius: 20px;
+    background-color: rgba(9, 9, 22, 0.88);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45);
 }
 
 .nav-container {
@@ -309,8 +316,75 @@ a {
 
 .hero-image {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+
+/* Available for Opportunities Status Badge */
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 18px;
+    background: rgba(18, 20, 45, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #e2e8f0;
+    position: absolute;
+    top: -140px;
+    right: 0;
+    z-index: 5;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    user-select: none;
+}
+
+.status-badge:hover {
+    border-color: rgba(16, 185, 129, 0.4);
+    box-shadow: 0 6px 24px rgba(16, 185, 129, 0.2);
+    transform: translateY(-2px);
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #10b981;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 0 10px #10b981;
+}
+
+.status-dot::after {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: rgba(16, 185, 129, 0.4);
+    animation: status-pulse 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+@keyframes status-pulse {
+    0% {
+        transform: scale(0.6);
+        opacity: 0.9;
+    }
+    50% {
+        transform: scale(1.6);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(0.6);
+        opacity: 0;
+    }
 }
 
 .hero-avatar {
@@ -327,7 +401,6 @@ a {
     position: relative;
     width: 100%;
     height: 500px;
-    perspective: 1000px;
 }
 
 .mockup-device {
@@ -343,7 +416,6 @@ a {
     height: 300px;
     right: 0;
     top: 50px;
-    transform: rotateY(-15deg) rotateX(5deg);
     border: 8px solid #2f3136;
     border-bottom-width: 16px;
 }
@@ -505,18 +577,6 @@ a {
     direction: ltr;
 }
 
-/* Custom background canvas */
-#hero-canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 0;
-    pointer-events: none;
-}
-
-/* Make sure main sections render over background canvas */
 .hero, .feature, .footer {
     position: relative;
     z-index: 2;
@@ -1014,6 +1074,14 @@ a {
     
     .hero-buttons {
         justify-content: center;
+    }
+
+    .status-badge {
+        position: relative;
+        top: 0;
+        right: auto;
+        align-self: center;
+        margin-bottom: 20px;
     }
     
     .hero {
