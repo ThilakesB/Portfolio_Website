@@ -1,13 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Navbar Scroll Effect
+    // 1. Smart Smooth Motion Navbar Scroll Effect
     const navbar = document.getElementById('navbar');
-    
+    let lastScrollY = window.scrollY;
+
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
+        const currentScrollY = window.scrollY;
+
+        // Add scrolled background glass state
+        if (currentScrollY > 40) {
             navbar.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
         }
+
+        // Smart motion: hide on scroll down, reveal on scroll up
+        if (currentScrollY > 150 && currentScrollY > lastScrollY) {
+            navbar.classList.add('nav-hidden');
+        } else {
+            navbar.classList.remove('nav-hidden');
+        }
+
+        lastScrollY = currentScrollY;
     });
 
     // 2. Mobile Menu Toggle
