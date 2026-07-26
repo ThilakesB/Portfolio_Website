@@ -105,6 +105,26 @@ a {
   border-color: #3A4658;
 }
 
+.microsoft-btn {
+  background: #0B1F2A !important;
+  background-image: none !important;
+  color: #fff !important;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  transition: all 0.3s ease;
+
+  /* Remove theme effects */
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  filter: none !important;
+}
+
+.microsoft-btn:hover {
+  background: #123247 !important;
+  border-color: #0078D4;
+  box-shadow: 0 0 15px rgba(0, 120, 212, 0.3) !important;
+}
+
 
 
 .hover-lift {
