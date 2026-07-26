@@ -90,6 +90,19 @@ document.addEventListener('DOMContentLoaded', () => {
             stagger: 0.15,
             ease: 'power2.out'
         });
+
+        // Hackathons Showcase Animation
+        gsap.from('.hackathon-card-showcase', {
+            scrollTrigger: {
+                trigger: '#hackathons',
+                start: 'top 80%',
+                toggleActions: 'play none none none'
+            },
+            opacity: 0,
+            y: 40,
+            duration: 0.8,
+            ease: 'power2.out'
+        });
     }
 });
 
