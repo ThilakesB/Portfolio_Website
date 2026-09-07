@@ -1,8 +1,11 @@
 # robots.txt for Thilakeswaran B - Portfolio
-# https://thilakesb.github.io/Portfolio/
+# https://thilakesb.vercel.app/
 
 User-agent: *
 Allow: /
 
+# Block verification file from indexing
+Disallow: /googleff21c6faa23490f2.html
+
 # Sitemap location
-Sitemap: https://thilakesb.github.io/Portfolio/sitemap.xml
+Sitemap: https://thilakesb.vercel.app/sitemap.xml
