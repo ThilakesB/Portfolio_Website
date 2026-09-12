@@ -1,3 +1,82 @@
+/* ── Glassmorphism Custom Cursor ───────────────────────────────── */
+(function () {
+    // Only enable on pointer (non-touch) devices
+    if (!window.matchMedia('(hover: hover)').matches) return;
+
+    // Create DOM elements
+    const orb = document.createElement('div');
+    orb.id = 'cursor-orb';
+    const dot = document.createElement('div');
+    dot.id = 'cursor-dot';
+    document.body.appendChild(orb);
+    document.body.appendChild(dot);
+    document.body.classList.add('custom-cursor-active');
+
+    // Spring state for the orb (lagged)
+    let orbX = -100, orbY = -100;
+    let dotX = -100, dotY = -100;
+    let mouseX = -100, mouseY = -100;
+    const ORB_SPEED = 0.12;   // 0–1: lower = more lag
+    const DOT_SPEED = 1.0;    // dot snaps instantly
+
+    function lerp(a, b, t) { return a + (b - a) * t; }
+
+    function tick() {
+        orbX = lerp(orbX, mouseX, ORB_SPEED);
+        orbY = lerp(orbY, mouseY, ORB_SPEED);
+        dotX = lerp(dotX, mouseX, DOT_SPEED);
+        dotY = lerp(dotY, mouseY, DOT_SPEED);
+
+        orb.style.transform = `translate(calc(${orbX}px - 50%), calc(${orbY}px - 50%))`;
+        dot.style.transform = `translate(calc(${dotX}px - 50%), calc(${dotY}px - 50%))`;
+
+        requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+
+    // Track mouse position
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    });
+
+    // Hover effect on interactive elements
+    const hoverTargets = 'a, button, [role="button"], input, textarea, select, label, .project-card, .timeline-item, .cert-timeline-item, .hackathon-card-showcase, .center-text, .nav-link';
+    document.addEventListener('mouseover', (e) => {
+        if (e.target.closest(hoverTargets)) {
+            orb.classList.add('hovering');
+            dot.classList.add('hovering');
+        }
+    });
+    document.addEventListener('mouseout', (e) => {
+        if (e.target.closest(hoverTargets)) {
+            orb.classList.remove('hovering');
+            dot.classList.remove('hovering');
+        }
+    });
+
+    // Click burst effect
+    document.addEventListener('mousedown', () => {
+        orb.classList.add('clicking');
+        dot.classList.add('clicking');
+    });
+    document.addEventListener('mouseup', () => {
+        orb.classList.remove('clicking');
+        dot.classList.remove('clicking');
+    });
+
+    // Hide when pointer leaves window
+    document.addEventListener('mouseleave', () => {
+        orb.style.opacity = '0';
+        dot.style.opacity = '0';
+    });
+    document.addEventListener('mouseenter', () => {
+        orb.style.opacity = '1';
+        dot.style.opacity = '1';
+    });
+})();
+/* ──────────────────────────────────────────────────────────────── */
+
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Smart Smooth Motion Navbar Scroll Effect
     const navbar = document.getElementById('navbar');
