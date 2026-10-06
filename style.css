@@ -1376,3 +1376,34 @@ a {
         gap: 14px;
     }
 }
+
+/* Proofs annotation */
+.proofs-annotation {
+    position: absolute;
+    bottom: -60px;
+    right: 5%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--text-black);
+    font-family: 'Playfair Display', cursive;
+    font-style: italic;
+    font-weight: 800;
+    font-size: 1.8rem;
+    transform: rotate(-3deg);
+    z-index: 10;
+    pointer-events: none;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+}
+
+.drawn-arrow {
+    transform: rotate(-10deg);
+}
+
+@media (max-width: 768px) {
+    .proofs-annotation {
+        bottom: -70px;
+        right: 10%;
+        font-size: 1.5rem;
+    }
+}
